@@ -1,0 +1,11 @@
+---
+title: Quick Tips
+---
+
+<h1>Quick Tips</h1>
+
+<div class="card-grid">
+{% for card in collections.tips %}
+    {% render "info-card.html", card: card %}
+{% endfor %}
+</div>

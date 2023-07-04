@@ -1,0 +1,13 @@
+<div class="card">
+    {% if card.data.image %}
+    <div class="card-media">
+        <img src="{{ card.data.image }}" alt="">
+    </div>
+    {% endif %}
+    <div class="card-content">
+        <h3>{{ card.data.title }}</h3>
+        <div class="body">
+            {{ card.templateContent }}
+        </div>
+    </div>
+</div>
