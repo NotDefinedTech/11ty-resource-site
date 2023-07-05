@@ -10,4 +10,9 @@
             {{ card.templateContent }}
         </div>
     </div>
+    {% if card.data.ctaLink %}
+    <div class="card-footer">
+        <a href="{{ card.data.ctaLink }}">{{ card.data.ctaText }}</a>
+    </div>
+    {% endif %}
 </div>

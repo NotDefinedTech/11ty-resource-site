@@ -1,0 +1,21 @@
+$btn-themes: (
+    primary: black,
+    secondary: blue
+);
+
+@each $theme, $bg in $btn-themes {
+    .btn-#{$theme} {
+        padding: 1rem;
+        border: 1px solid black;
+        background-color: $bg;
+        color: white;
+        border-radius: 6px;
+        transition: all .35s;
+        text-decoration: none;
+        font-size: 1rem;
+        @at-root .btn-#{$theme}:hover {
+            color: $bg;
+            background-color: white;
+        }
+    }
+}

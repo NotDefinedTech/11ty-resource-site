@@ -13,8 +13,27 @@ body {
 :where(h1, h2, h3, h4, h5, h6) {
     padding: 1.5em 0 .5em 0;
 }
+.skip {
+    position: absolute;
+    top: -500px;
+    transition: all .35s;
+    padding: 1rem;
+    background-color: blue;
+    color: white;
+}
+.skip:focus-within {
+    top: 0;
+    transition: all .35s;
+}
 
 img {
     max-width: 100%;
     display: block;
+}
+
+pre, code {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 6px;
 }
