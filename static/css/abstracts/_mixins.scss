@@ -1,16 +1,16 @@
 // https://stackoverflow.com/questions/7539125/can-i-target-all-h-tags-with-a-single-selector
 
-// @mixin headings {
-//     h1, h2, h3,
-//     h4, h5, h6 {
-//         @content;
-//     }
-// }
+@mixin headings {
+    h1, h2, h3,
+    h4, h5, h6 {
+        @content;
+    }
+}
 // --------------
 
 // https://stackoverflow.com/questions/7539125/can-i-target-all-h-tags-with-a-single-selector
 
-h1, h2, h3,
-h4, h5, h6 {
-    @extend %headings !optional;
-}
+// h1, h2, h3,
+// h4, h5, h6 {
+//     @extend %headings !optional;
+// }

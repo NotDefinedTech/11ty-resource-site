@@ -10,15 +10,23 @@
 
 </head>
 <body>
-    <nav>
+    <nav id="header-nav">
         <a href="#main" class="skip visually-hidden">Skip to main content</a>
-        <ul>
-            {% for page in collections.all %}
-                {% if page.data.navigation %}
-                    <li><a href="{{ page.url }}">{{ page.data.navigation }}</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
+
+        <div class="navbar">
+            <a href="/">
+                <div class="brand">
+                    <div style="background:red; border-radius: 50px; width: 50px; height: 50px; font-size: 8px; display: flex; justify-content: center; align-items: center;">LOGO</div>
+                </div>
+            </a>
+            <ul>
+                {% for page in collections.all %}
+                    {% if page.data.navigation %}
+                        <li><a href="{{ page.url }}">{{ page.data.navigation }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
     </nav>
 
 
@@ -29,7 +37,7 @@
     </div>
 
     <footer>
-        <div class="container">
+        <div class="legal">
             &copy; 2023 My Company
         </div>
     </footer>

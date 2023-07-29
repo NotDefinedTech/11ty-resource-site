@@ -25,15 +25,29 @@ body {
     top: 0;
     transition: all .35s;
 }
-
+a {
+    color: currentColor;
+    text-decoration: none;
+    transition: all .15s ease-in;
+    &:hover {
+        color: blue;
+    }
+}
 img {
     max-width: 100%;
     display: block;
 }
-
-pre, code {
+pre {
+    white-space: break-spaces;
     background-color: black;
-    color: white;
     padding: 1rem;
+}
+pre, code {
+    color: white;
+    // background-color: black;
+    // padding: 1rem;
+    word-break: break-all;
+    position: relative;
     border-radius: 6px;
+    
 }

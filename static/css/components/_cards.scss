@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as mixin;
+
 .card {
     border: 1px solid black;
     border-radius: 6px;
@@ -9,8 +11,11 @@
     &-footer {
         padding: 1rem;
     }
-
-    h1, h2, h3, h4, h5, h6 {
+    
+    @include mixin.headings {
         padding-top: 0;
     }
+    // h1, h2, h3, h4, h5, h6 {
+    //     padding-top: 0;
+    // }
 }
