@@ -1,26 +1,26 @@
 ---
 layout: base.html
 title: Templatize Email
-navigation: Home
-navOrder: 1
 ---
+<header>
+  <h1>My Resources</h1>
+  <div class="card-grid">
+  {% assign topTips = collections.tips | slice: 0, 3 %}
+  {% for card in topTips %}
+      {% render "info-card.html", card: card %}
+  {% endfor %}
+  </div>
 
-<h1>My Resources</h1>
-<div class="card-grid">
-{% assign topTips = collections.tips | slice: 0, 3 %}
-{% for card in topTips %}
-    {% render "info-card.html", card: card %}
-{% endfor %}
-</div>
+  <a href="#" class="btn-primary">Normal Link&nbsp;&rsaquo;</a>
+</header>
 
-<a href="#" class="btn-primary">Normal Link&nbsp;&rsaquo;</a>
-<button class="btn-secondary">Button&nbsp;&rsaquo;</button>
-
-<h2>Featured Tips</h2>
-<div class="card-grid">
-{% for card in collections.tips %}
-  {% if card.data.tags contains 'tips' and card.data.tags contains 'featured' %}
-    {% render "info-card.html", card: card %}
-  {% endif %}
-{% endfor %}
-</div>
+<section>
+  <h2>Featured Tips</h2>
+  <div class="card-grid">
+  {% for card in collections.tips %}
+    {% if card.data.tags contains 'tips' and card.data.tags contains 'featured' %}
+      {% render "info-card.html", card: card %}
+    {% endif %}
+  {% endfor %}
+  </div>
+</section>

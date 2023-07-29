@@ -2,6 +2,26 @@ body {
     display: grid;
     grid-template-rows: 4rem 1fr 4rem;
 }
+nav {
+    & ul {
+        padding: 0;
+        & li {
+            list-style: none;
+        }
+    }
+    &.nav-sidebar {
+        display: flex;
+        flex-direction: column;
+        color: black;
+        background-color: #efefef;
+        max-width: 300px;
+        padding: 1rem;
+        border-radius: 5px;
+        & li {
+            margin-bottom: 1rem;
+        }
+    }
+}
 nav, footer {
     color: white;
     background-color: black;
@@ -10,6 +30,37 @@ nav, footer {
 }
 nav > *, footer > * {
     grid-column: 2;
+}
+#header-nav {
+    & .navbar {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    & .brand {
+        & img {
+            max-width: 50px;
+        }
+    }
+    & ul {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        
+    }
+    & li > a {
+        color: white;
+        text-decoration: none;
+        transition: all .15s ease-in;
+        padding: .5rem 1rem;
+        &:hover {
+            background-color: white;
+            color: black; 
+        }
+    }
+}
+footer {
+    align-items: center;
 }
 .container {
     display: grid;
@@ -21,6 +72,12 @@ nav > *, footer > * {
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    margin-bottom: 2rem;
 }
+
+header, section {
+    padding: 3rem 0;
+}
+

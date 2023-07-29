@@ -3,13 +3,16 @@ layout: base.html
 title: Resources
 permalink: /resources/
 navigation: Resources
-navOrder: 2
+navOrder: 1
 ---
-
-<h1>Resources</h1>
-
-<ul>
-{% for page in collections.resource %}
-<li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
-{% endfor %}
-</ul>
+<section>
+    <h1>Resources</h1>
+    
+    <nav class="nav-sidebar">
+        <ul>
+            {% for page in collections.resource %}
+            <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</section>
